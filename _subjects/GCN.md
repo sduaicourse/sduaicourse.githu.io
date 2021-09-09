@@ -12,10 +12,16 @@ image:https://i.loli.net/2021/09/09/UrasxYwgTRyndMB.png
 
 # 社交网络分析
 你有没有想过你的下一个微信好友是谁？好奇下一个请求可能来自哪里？
+
+
 ![1.png](https://i.loli.net/2021/09/09/UrasxYwgTRyndMB.png)
+
+
 Prateek Joshi使用来自全球各地的流行食品店和知名厨师的 Facebook 页面的[数据集](https://networkrepository.com/fb-pages-food.php),做了类似的一个[链路预测](https://www.analyticsvidhya.com/blog/2020/01/link-prediction-how-to-predict-your-future-connections-on-facebook/)，可以作为参考。
 
 # 参考论文
+
+
 [Link Prediction Based on Graph Neural Networks](https://arxiv.org/pdf/1802.09691.pdf)
 
 [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](https://arxiv.org/pdf/1902.10191.pdf)
