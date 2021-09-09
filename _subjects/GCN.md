@@ -4,9 +4,8 @@ title: 链路预测
 categories: 
 description: 你有没有想过你的下一个微信好友是谁？好奇下一个请求可能来自哪里？通过链路预测来实现吧。
 keywords: 
-image:https://i.loli.net/2021/09/09/UrasxYwgTRyndMB.png
+image: https://i.loli.net/2021/09/09/UrasxYwgTRyndMB.png
 ---
-
 # 课题简介
 网络中的链路预测(Link Prediction)是指如何通过已知的网络节点以及网络结构等信息预测网络中尚未产生连边的两个节点之间产生链接的可能性。这种预测既包含了对未知链接（exist yet unknown links）的预测也包含了对未来链接（future links）的预测。
 
