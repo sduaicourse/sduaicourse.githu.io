@@ -29,13 +29,10 @@ image: https://i.loli.net/2021/09/16/BwbNfZcEGPae192.png
 ![4.png](https://i.loli.net/2021/09/16/kLQSARoHygDJ8mY.png)
 此处使用CycleGAN模型，CycleGAN在最开始提出时，是应用在图片的风格迁移领域，可以解决数据的不对称问题，这正好与音频转换的目标相似，即对于非平行的语音数据进行语音上的“风格迁移”，应用于本项目的CycleGAN的生成器如图的左半部分所示，鉴别器如图的右半部分所示。
 在损失函数的选择上，生成器的损失函数主要是Adversarial loss（式1）、Cycle-consistency loss（式2）和identity-mapping loss（式3）
- L_"adv"  (G_(X->Y),D_Y)=E_(y~P_(Y(y)) ) [log⁡〖D_Y 〗 (y)]+E_(x~P_(X(x)) ) [log⁡( 1-D_Y (G_(X->Y) (x)))]（式1）
- L_"cyc"  (G_(X->Y),G_(Y->X))=E_(x~P_X (x)) [||G_(Y->X) (G_(X->Y) (x))-x||_1]+E_(y~P_Y (y)) [||G_(X->Y) (G_(Y->X) (y))-y||_1]
-（式2）
- L_"id"  (G_(X->Y),G_(Y->X))=E_(y~P_Y (y)) [||G_(X->Y) (y)-y||_1]+E_(x~P_X (x)) [||G_(Y->X) (x)-x||_1]（式3）
+![式1.png](https://i.loli.net/2021/09/16/M15fPsYGuRbtvCk.png)
 鉴别器的损失函数为Adversarial loss（即CycleGAN 针对鉴别器的对抗损失函数）和Adversarial 2 loss（式4）（加入此损失后效果得到明显的提升）。
  
-L_adv2 (G_(X->Y),G_(Y->X),〖D^'〗_X)=E_(x~P_X (x)) [〖log⁡〖D^' 〗〗_X (x)]+E_(x~P_X (x)) [log⁡( 1-〖D^'〗_X (G_(Y->X) (G_(X->Y) (x))))]（式4）
+![式2.png](https://i.loli.net/2021/09/16/pNxEF8RvrUgYlo7.png)（式4）
 
 #3.语音合成
 得到了转换后的基频、频谱包络和非周期性参数之后，通过语音合成器进行新的语音的合成，就可以得到一段新的语音。
